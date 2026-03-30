@@ -1,5 +1,5 @@
 // TODO 1: Import Express
-const express = require("express");
+import express from "express";
 
 
 
@@ -9,6 +9,17 @@ const app = express();
 
 
 // TODO 3: Allow React to access the server
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  if (req.method === "OPTIONS") {
+    return res.sendStatus(204);
+  }
+
+  next();
+});
 
 
 
