@@ -360,7 +360,9 @@ export default function App() {
   // Create state to store student data
   // Syntax hint:
   // const [student, setStudent] = useState(____);
-  const [student, setStudent] = useState(null);
+
+  const [student, setStudent]  = useState(null);
+
 
   // TODO 8:
   // Request student data from the server when the page loads
