@@ -11,6 +11,7 @@ const app = express();
 
 // TODO 3: Allow React to access the server
 app.use(cors());
+// this push was actaully fix for TODO 3, not 9.
 
 
 
