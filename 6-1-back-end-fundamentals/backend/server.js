@@ -36,3 +36,7 @@ app.use((req, res, next) => {
 
 
 // TODO 4: Start the server on port 3000
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
